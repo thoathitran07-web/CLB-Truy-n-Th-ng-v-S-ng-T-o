@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="CLB Kinh doanh số, thương mại điện tử, khởi nghiệp">
+<meta name="author" content="Câu lạc bộ Kinh doanh số">
+<title>Câu lạc bộ Kinh doanh số</title>
+
+<link rel="shortcut icon" href="img/2.png">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/LineIcons.css">
+<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/owl.theme.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="css/nivo-lightbox.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+<style>
+/* Bổ sung giao diện quản lý và CSS chuẩn từ Bài 1, Bài 2 */
+.management-section {padding:70px 0;background:#f8f9fa}
+.management-card {
+ background:#fff;padding:25px;margin-bottom:25px;
+ border-radius:10px;box-shadow:0 5px 25px rgba(0,0,0,.07)
+}
+.management-card h3 {color:#3f37c9;margin-bottom:20px}
+.management-section .form-control {
+ border-radius:5px;margin-bottom:12px;min-height:42px
+}
+.management-section .btn-common {margin:4px}
+.management-table {width:100%;background:white}
+.management-table th {
+ background:#4936e5;color:white;padding:12px
+}
+.management-table td {padding:11px;border-bottom:1px solid #eee}
+.management-table tr:hover {background:#f4f3ff}
+.stat-card {
+ background:linear-gradient(120deg,#4936e5,#24b9e8);
+ color:white;padding:22px;border-radius:10px;margin-bottom:15px
+}
+.stat-card h2 {color:white}
+.section-title {font-weight:700}
+.notice {margin-top:12px;font-weight:600}
+footer {padding:35px 0;background:#171a23;color:white;text-align:center}
+footer p {color:#ddd}
+#registration {scroll-margin-top:90px}
+.management-section {scroll-margin-top:80px}
+
+/* --- CSS TÍCH HỢP TỪ BÀI 1 (Form Đăng ký) --- */
+.register-form-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.register-form {
+  background-color: #e0f2fe;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 420px;
+  padding-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  text-align: left;
+}
+.register-form:hover {
+  box-shadow: 0 8px 16px #E0FEF2;
+  transform: translateY(-2px);
+}
+.form-header {
+  background-color: #38bdf8;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  font-weight: bold;
+  font-size: 15px;
+}
+.form-body {
+  padding: 15px 25px;
+}
+.form-group-custom {
+  margin-bottom: 12px;
+}
+.form-group-custom label {
+  display: block;
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+.form-group-custom input, .form-group-custom textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 4px solid #94B8A3;
+  border-radius: 4px;
+  outline: none;
+  font-size: 13px;
+  transition: all 0.2s ease;
+  background-color: #fff;
+}
+.form-group-custom input:focus, .form-group-custom textarea:focus {
+  border-color: #A3B894;
+  box-shadow: 0 0 8px #bfdbfe;
+}
+.btn-submit-custom {
+  width: 100%;
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+.btn-submit-custom:hover {
+  background-color: #4f46e5;
+}
+.btn-submit-custom:active {
+  background-color: #3730a3;
+  transform: translateY(-4px);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+/* --- CSS TÍCH HỢP TỪ BÀI 2 (Card Giới thiệu bản thân) --- */
+.intro-card-custom {
+  background-color: #fffdf5;
+  border-radius: 30px;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  text-align: left;
+}
+.content-box-custom {
+  background-color: #cce7f6;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  padding: 30px 20px;
+  width: 52%;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.content-box-custom h1 {
+  margin: 0;
+  font-size: 26px;
+  color: #1e293b;
+  font-weight: 900;
+  line-height: 1.25;
+}
+.content-box-custom p {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #556270;
+  line-height: 1.5;
+  font-weight: 600;
+}
+.avatar-wrapper-custom {
+  width: 42%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.orange-frame-custom {
+  background-color: #fca33d;
+  border-radius: 25px 20px 30px 20px;
+  width: 180px;
+  height: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 8px 15px rgba(252, 163, 61, 0.2);
+}
+.avatar-img-custom {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.purple-dot-custom {
+  position: absolute;
+  top: -10px;
+  right: 65px;
+  width: 30px;
+  height: 30px;
+  background-color: #a7a9fc;
+  border-radius: 50%;
+  z-index: 3;
+}
+.rainbow-decor-custom {
+  position: absolute;
+  bottom: -10px;
+  right: -5px;
+  width: 80px;
+  z-index: 3;
+}
+.star-decor-custom {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 35px;
+  z-index: 3;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MENU VÀ TRANG CHỦ -->
+<header id="home" class="hero-area">
+<div class="overlay"><span></span><span></span></div>
+
+<nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
+<div class="container">
+<a href="#home" class="navbar-brand">
+<img src="img/logo.png" alt="Logo CLB">
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse"
+data-target="#navbarCollapse">
+<i class="lni-menu"></i>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav mr-auto w-100 justify-content-end">
+<li class="nav-item"><a class="nav-link page-scroll" href="#home">Trang chủ</a></li>
+<li class="nav-item"><a class="nav-link page-scroll" href="#services">Giới thiệu</a></li>
+<li class="nav-item"><a class="nav-link page-scroll" href="#features">Hoạt động</a></li>
+<li class="nav-item"><a class="nav-link page-scroll" href="#showcase">Thư viện</a></li>
+<li class="nav-item"><a class="nav-link page-scroll" href="#team">Ban chủ nhiệm</a></li>
+<li class="nav-item"><a class="nav-link page-scroll" href="#blog">Sự kiện</a></li>
+<li class="nav-item"><a class="nav-link page-scroll" href="#quan-ly">Quản lý</a></li>
+<li class="nav-item"><a class="nav-link page-scroll" href="#registration">Đăng ký</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<div class="container">
+<div class="row space-100">
+<div class="col-lg-6 col-md-12">
+<div class="contents">
+<h2 class="head-title">CÂU LẠC BỘ TRUYỀN THÔNG VÀ SÁNG TẠO</h2>
+<p>Sáng tạo không giới hạn – Kết nối đam mê – Khẳng định tài năng.</p>
+<div class="header-button">
+<a href="#services" class="btn btn-border-filled page-scroll">Khám phá CLB</a>
+<a href="#registration" class="btn btn-border page-scroll">Tham gia ngay</a>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 p-0">
+<div class="intro-img">
+<img src="https://img.magnific.com/vector-mien-phi/hinh-minh-hoa-vector-ve-nhung-nguoi-kinh-doanh-dang-cu-phang-3d-khai-niem-ve-mot-nha-lanh-dao-doanh-nghiep-nguoi-quan-ly-dan-dau-ceo_1441-236.jpg?semt=ais_hybrid&w=740&q=80" alt="Giới thiệu CLB">
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<!-- GIỚI THIỆU: TÍCH HỢP NỘI DUNG BÀI 2 -->
+<section id="services" class="section">
+<div class="container">
+<div class="section-header text-center">
+<h2 class="section-title">Giới thiệu câu lạc bộ</h2>
+<p>Không gian học tập, sáng tạo và kết nối dành cho sinh viên.</p>
+</div>
+
+<!-- Đưa Card Giới thiệu bản thân (Bài 2) vào đây -->
+<div class="row justify-content-center mb-5">
+<div class="col-12">
+  <div class="intro-card-custom">
+    <!-- Ngôi sao trang trí góc trái -->
+    <svg class="star-decor-custom" viewBox="0 0 100 100">
+      <path d="M50 0 L61 39 L100 50 L61 61 L50 100 L39 61 L0 50 L39 39 Z" fill="#d2f864"/>
+    </svg>
+
+    <!-- Khối chữ bên trái -->
+    <div class="content-box-custom">
+      <h1>Tôi là<br>Trần Thị Thỏa</h1>
+      <p>Tôi là chủ nhiệm của Câu lạc bộ Truyền thông và Sáng tạo</p>
+    </div>
+
+    <!-- Khối ảnh và khung cam bên phải -->
+    <div class="avatar-wrapper-custom">
+      <div class="purple-dot-custom"></div>
+      <div class="orange-frame-custom">
+        <img src=anhdaidien.jpg alt="Avatar" class="avatar-img-custom">
+      </div>
+      <!-- Hình cầu vồng trang trí góc dưới -->
+      <svg class="rainbow-decor-custom" viewBox="0 0 100 60">
+        <path d="M10 50 A 40 40 0 0 1 90 50" stroke="#f687b3" stroke-width="8" fill="none" stroke-linecap="round"/>
+        <path d="M20 50 A 30 30 0 0 1 80 50" stroke="#63b3ed" stroke-width="8" fill="none" stroke-linecap="round"/>
+        <path d="M30 50 A 20 20 0 0 1 70 50" stroke="#f6e05e" stroke-width="8" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-lg-4 col-md-6">
+<div class="services-item text-center">
+<div class="icon"><i class="lni-users"></i></div>
+<h4>Kết nối cộng đồng</h4>
+<p>Kết nối sinh viên có cùng đam mê sáng tạo, chia sẻ ý tưởng và cùng nhau phát triển tài năng.</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="services-item text-center">
+<div class="icon"><i class="lni-bulb"></i></div>
+<h4>Sáng tạo và đổi mới</h4>
+<p>Khuyến khích tư duy sáng tạo, phát triển ý tưởng trên nền tảng mạng xã hội.</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="services-item text-center">
+<div class="icon"><i class="lni-graduation"></i></div>
+<h4>Phát triển kỹ năng</h4>
+<p>Rèn luyện kỹ năng chuyên môn, làm việc nhóm và giải quyết vấn đề thực tế.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- LỊCH SỬ VÀ ĐỊNH HƯỚNG -->
+<section id="business-plan">
+<div class="container">
+<div class="row">
+<div class="col-lg-6 col-md-12 pl-0 pt-70 pr-5">
+<div class="business-item-img">
+<img src="img/business/business-img.png" class="img-fluid" alt="Hoạt động kinh doanh">
+</div>
+</div>
+<div class="col-lg-6 col-md-12 pl-4">
+<div class="business-item-info">
+<h3>Hành trình phát triển CLB</h3>
+<p>Câu lạc bộ được thành lập với mong muốn kết nối những sinh viên có cùng đam mê sáng tạo, truyền thông và thiết kế. Từ những ngày đầu còn nhiều khó khăn, các thành viên đã cùng nhau xây dựng ý tưởng, tổ chức hoạt động và chia sẻ kinh nghiệm.</p>
+<p>Câu lạc bộ Truyền thông và Sáng tạo hướng đến việc xây dựng một cộng đồng sinh viên năng động, đoàn kết và giàu ý tưởng.</p>
+<h4>Tầm nhìn</h4>
+<p>Trở thành môi trường giúp sinh viên tự tin thể hiện bản thân, khám phá tiềm năng, phát huy sự sáng tạo và cùng nhau thực hiện những dự án ý nghĩa.</p>
+<a href="#features" class="btn btn-common page-scroll">Tìm hiểu hoạt động</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- HOẠT ĐỘNG -->
+<section id="features" class="section">
+<div class="container">
+<div class="section-header text-center">
+<h2 class="section-title">Hoạt động nổi bật</h2>
+<p>Các chương trình học tập và trải nghiệm của CLB.</p>
+</div>
+<div class="row featured-bg">
+<div class="col-lg-6 col-md-6">
+<div class="feature-item">
+<div class="feature-icon float-left"><i class="lni-graduation"></i></div>
+<div class="feature-info">
+<h4>Đào tạo kỹ năng giao tiếp</h4>
+<p>Học tập và thực hành các kỹ năng cần thiết trong môi trường truyền thông.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="feature-item">
+<div class="feature-icon float-left"><i class="lni-cart"></i></div>
+<div class="feature-info">
+<h4>Thương mại điện tử</h4>
+<p>Trang bị kiến thức và kỹ năng cần thiết để kinh doanh, quảng bá sản phẩm và phát triển thương hiệu trên nền tảng số.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="feature-item">
+<div class="feature-icon float-left"><i class="lni-pencil"></i></div>
+<div class="feature-info">
+<h4>Marketing và sáng tạo nội dung</h4>
+<p>Thực hành thiết kế, xây dựng thương hiệu và truyền thông trên nền tảng số.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="feature-item">
+<div class="feature-icon float-left"><i class="lni-network"></i></div>
+<div class="feature-info">
+<h4>Kết nối doanh nghiệp</h4>
+<p>Giao lưu, học hỏi kinh nghiệm từ chuyên gia và doanh nghiệp.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="feature-item">
+<div class="feature-icon float-left"><i class="lni-rocket"></i></div>
+<div class="feature-info">
+<h4>Dự án khởi nghiệp</h4>
+<p>Tạo môi trường để các thành viên thử sức với những ý tưởng kinh doanh mới, biến kiến thức đã học thành sản phẩm và mô hình kinh doanh thực tế.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="feature-item">
+<div class="feature-icon float-left"><i class="lni-handshake"></i></div>
+<div class="feature-info">
+<h4>Hoạt động cộng đồng</h4>
+<p>Xây dựng môi trường đoàn kết, chia sẻ và hỗ trợ các thành viên.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- THƯ VIỆN HÌNH ẢNH -->
+<section id="showcase" class="section">
+<div class="container">
+<div class="section-header text-center">
+<h2 class="section-title">Thư viện hình ảnh</h2>
+<p>Những khoảnh khắc đáng nhớ của câu lạc bộ.</p>
+</div>
+<div class="row">
+<div class="col-lg-4 col-md-6">
+<div class="showcase-thumb">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoypRMXeLcFaEBSk2tyTWK3fuP6EiH3CeAW3ZzJ66iMQ&s=10" class="img-fluid" alt="Hoạt động 1">
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="showcase-thumb">
+<img src="https://anmedia.vn/wp-content/uploads/2024/05/cong-ty-to-chuc-su-kien-2.png" class="img-fluid" alt="Hoạt động 2">
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="showcase-thumb">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI8S9eBPDN8AG7bltiP5W6P45hoToFwXCeRxmVE7-9EqqMogHBDvNImG4&s=10" class="img-fluid" alt="Hoạt động 3">
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="showcase-thumb">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSkF94WAn-htfDobjApYF0tYbKEVnEx84O6yNhDU5XC4XBorMDG54c8lxE&s=10" class="img-fluid" alt="Hoạt động 4">
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="showcase-thumb">
+<img src="https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2025/12/20/untitled-1-17661992974031807844144.jpg" class="img-fluid" alt="Hoạt động 5">
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="showcase-thumb">
+<img src="img/contact/01.png" class="img-fluid" alt="Hoạt động CLB">
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- BAN CHỦ NHIỆM -->
+<section id="team" class="section">
+<div class="container">
+<div class="section-header text-center">
+<h2 class="section-title">Ban chủ nhiệm</h2>
+<p>Đội ngũ điều hành và phát triển câu lạc bộ.</p>
+</div>
+<div class="row">
+<div class="col-lg-3 col-md-6">
+<div class="team-item text-center">
+<div class="team-img"><img src="anhdaidien.jpg" class="img-fluid" alt="Chủ nhiệm"></div>
+<div class="info-text"><h3>Trần Thị Thỏa</h3><p>Chủ nhiệm CLB</p></div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="team-item text-center">
+<div class="team-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq6FiOSuCyBmSS7NtgbtKnhQU1eCQm5lz-l-4cC-5JSA&s=10" class="img-fluid" alt="Phó chủ nhiệm"></div>
+<div class="info-text"><h3>Lê Thành Dương</h3><p>Phó chủ nhiệm</p></div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="team-item text-center">
+<div class="team-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0WGjKp_mejqApcAnpJ0WhhDMPAWmz09Fk6syg0biiDQ&s=10" class="img-fluid" alt="Trưởng ban"></div>
+<div class="info-text"><h3>Lê Trường Giang</h3><p>Trưởng ban chuyên môn</p></div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="team-item text-center">
+<div class="team-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRhm_FSLmp_i1CrKFcP2FKCoXBs1XdpFcUdwwHwYafHw&s=100" class="img-fluid" alt="Trưởng ban truyền thông"></div>
+<div class="info-text"><h3>Phạm Thị Nhã Phương</h3><p>Trưởng ban truyền thông</p></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- TIN TỨC VÀ SỰ KIỆN -->
+<section id="blog" class="section">
+<div class="container">
+<div class="section-header text-center">
+<h2 class="section-title">Tin tức và sự kiện</h2>
+<p>Cập nhật những chương trình mới nhất của CLB.</p>
+</div>
+<div class="row">
+<div class="col-lg-4 col-md-6">
+<div class="blog-item-wrapper">
+<div class="blog-item-img"><img src="https://premedia.vneconomy.vn/files/uploads/2025/10/08/9f54a1126f97466e8876a34edcc85bf8-19557.jpg" class="img-fluid" alt="Hội thảo"></div>
+<div class="blog-item-text">
+<h3>Hội thảo truyền thông</h3>
+<p>Chia sẻ xu hướng thương mại điện tử và ứng dụng công nghệ trong kinh doanh.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="blog-item-wrapper">
+<div class="blog-item-img"><img src="https://images2.thanhnien.vn/528068263637045248/2023/10/17/a-16975463519272082231647.jpg" class="img-fluid" alt="Khởi nghiệp"></div>
+<div class="blog-item-text">
+<h3>Cuộc thi ý tưởng khởi nghiệp</h3>
+<p>Sân chơi sáng tạo dành cho sinh viên có ý tưởng mới.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="blog-item-wrapper">
+<div class="blog-item-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtFHl8LEgz_AT0sysaHwg7wU5Jbds3BHvJ0tLbDqeSgQ&s=10" class="img-fluid" alt="Workshop"></div>
+<div class="blog-item-text">
+<h3>Workshop kỹ năng số</h3>
+<p>Thực hành kỹ năng marketing, thiết kế và truyền thông trực tuyến.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- QUẢN LÝ CÂU LẠC BỘ -->
+<section id="quan-ly" class="management-section">
+<div class="container">
+<div class="section-header text-center">
+<h2 class="section-title">HỆ THỐNG QUẢN LÝ CÂU LẠC BỘ</h2>
+<p>Quản lý thành viên, sự kiện và tài chính CLB Truyền thông và Sáng tạo.</p>
+</div>
+
+<!-- THỐNG KÊ -->
+<div class="row">
+<div class="col-md-4">
+<div class="stat-card">
+<h4>Tổng thành viên</h4>
+<h2 id="totalMembers">4</h2>
+</div>
+</div>
+<div class="col-md-4">
+<div class="stat-card">
+<h4>Sự kiện</h4>
+<h2 id="totalEvents">0</h2>
+</div>
+</div>
+<div class="col-md-4">
+<div class="stat-card">
+<h4>Số dư quỹ</h4>
+<h2 id="totalBalance">0 ₫</h2>
+</div>
+</div>
+</div>
+
+<!-- QUẢN LÝ THÀNH VIÊN -->
+<div class="management-card">
+<h3><i class="lni-users"></i> Quản lý thành viên</h3>
+
+<div class="row">
+<div class="col-md-4">
+<input type="hidden" id="memberId">
+<input class="form-control" id="memberName" placeholder="Họ và tên">
+</div>
+<div class="col-md-4">
+<input class="form-control" id="memberEmail" type="email" placeholder="Email">
+</div>
+<div class="col-md-4">
+<input class="form-control" id="memberPhone" placeholder="Số điện thoại">
+</div>
+<div class="col-md-4">
+<input class="form-control" id="memberClass" placeholder="Lớp">
+</div>
+<div class="col-md-4">
+<select class="form-control" id="memberRole">
+<option value="Thành viên">Thành viên</option>
+<option value="Phó chủ nhiệm">Phó chủ nhiệm</option>
+<option value="Chủ nhiệm">Chủ nhiệm</option>
+<option value="Chủ nhiệm">Trưởng ban chuyên môn</option>
+<option value="Chủ nhiệm">Trưởng ban truyền thông</option>
+</select>
+</div>
+<div class="col-md-4">
+<button class="btn btn-common btn-block" id="saveMember">Thêm thành viên</button>
+</div>
+</div>
+
+<input class="form-control" id="memberSearch" placeholder="Tìm kiếm thành viên theo tên, email hoặc lớp...">
+
+<div class="table-responsive">
+<table class="management-table">
+<thead>
+<tr>
+<th>Họ tên</th><th>Email</th><th>Điện thoại</th>
+<th>Lớp</th><th>Chức vụ</th><th>Thao tác</th>
+</tr>
+</thead>
+<tbody id="memberRows"></tbody>
+</table>
+</div>
+<p class="notice" id="memberNotice"></p>
+</div>
+
+<!-- QUẢN LÝ SỰ KIỆN -->
+<div class="management-card">
+<h3><i class="lni-calendar"></i> Quản lý sự kiện / Lịch sinh hoạt</h3>
+<div class="row">
+<div class="col-md-4">
+<input class="form-control" id="eventName" placeholder="Tên sự kiện">
+</div>
+<div class="col-md-3">
+<input class="form-control" type="date" id="eventDate">
+</div>
+<div class="col-md-3">
+<input class="form-control" id="eventPlace" placeholder="Địa điểm">
+</div>
+<div class="col-md-2">
+<button class="btn btn-common btn-block" id="addEvent">Thêm</button>
+</div>
+</div>
+<div class="table-responsive">
+<table class="management-table">
+<thead>
+<tr><th>Tên sự kiện</th><th>Thời gian</th><th>Địa điểm</th><th>Đăng ký / Điểm danh</th><th>Thao tác</th></tr>
+</thead>
+<tbody id="eventRows"></tbody>
+</table>
+</div>
+<p class="notice" id="eventNotice"></p>
+</div>
+
+<!-- QUẢN LÝ TÀI CHÍNH -->
+<div class="management-card">
+<h3><i class="lni-wallet"></i> Quản lý tài chính / Quỹ CLB</h3>
+<div class="row">
+<div class="col-md-4">
+<input class="form-control" id="financeDesc" placeholder="Nội dung thu / chi">
+</div>
+<div class="col-md-3">
+<input class="form-control" id="financeAmount" type="number" min="1" placeholder="Số tiền (VNĐ)">
+</div>
+<div class="col-md-2">
+<select class="form-control" id="financeType">
+<option value="thu">Thu</option>
+<option value="chi">Chi</option>
+</select>
+</div>
+<div class="col-md-3">
+<button class="btn btn-common btn-block" id="addFinance">Ghi nhận</button>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-4"><div class="stat-card"><h5>Tổng thu</h5><h3 id="financeIncome">0 ₫</h3></div></div>
+<div class="col-md-4"><div class="stat-card"><h5>Tổng chi</h5><h3 id="financeExpense">0 ₫</h3></div></div>
+<div class="col-md-4"><div class="stat-card"><h5>Số dư</h5><h3 id="financeBalance">0 ₫</h3></div></div>
+</div>
+
+<div class="table-responsive">
+<table class="management-table">
+<thead>
+<tr><th>Nội dung</th><th>Loại</th><th>Số tiền</th><th>Ngày</th><th>Thao tác</th></tr>
+</thead>
+<tbody id="financeRows"></tbody>
+</table>
+</div>
+<button class="btn btn-common" id="printFinance">In báo cáo tài chính</button>
+</div>
+</div>
+</section>
+
+<!-- ĐĂNG KÝ THAM GIA: TÍCH HỢP NỘI DUNG BÀI 1 -->
+<section id="registration" class="section">
+<div class="container">
+<div class="section-header text-center">
+<h2 class="section-title">ĐĂNG KÝ THAM GIA CÂU LẠC BỘ</h2>
+<p>Hãy trở thành một phần của cộng đồng Truyền thông và Sáng tạo.</p>
+</div>
+<div class="row justify-content-center">
+<div class="col-lg-6 col-md-8 col-xs-12 register-form-wrap">
+<form id="registrationForm" class="register-form">
+<div class="form-header">Đăng ký tài khoản</div>
+<div class="form-body">
+  <div class="form-group-custom">
+    <label>Tên đăng nhập *</label>
+    <input type="text" id="regUsername" required placeholder="Nhập tên đăng nhập...">
+  </div>
+  <div class="form-group-custom">
+    <label>Họ và tên *</label>
+    <input type="text" id="regName" required placeholder="Nhập họ và tên...">
+  </div>
+  <div class="form-group-custom">
+    <label>Email *</label>
+    <input type="email" id="regEmail" required placeholder="Nhập email...">
+  </div>
+  <div class="form-group-custom">
+    <label>Mật khẩu *</label>
+    <input type="password" id="regPassword" required placeholder="Nhập mật khẩu...">
+  </div>
+  <div class="form-group-custom">
+    <label>Xác nhận mật khẩu</label>
+    <input type="password" id="regConfirmPassword" placeholder="Nhập lại mật khẩu...">
+  </div>
+  <div class="form-group-custom">
+    <label>Số điện thoại *</label>
+    <input type="tel" id="regPhone" required placeholder="Nhập số điện thoại...">
+  </div>
+  <div class="form-group-custom">
+    <label>Nhập địa chỉ</label>
+    <input type="text" id="regAddress" placeholder="Nhập địa chỉ...">
+  </div>
+  <div class="form-group-custom">
+    <label>Lý do muốn tham gia CLB</label>
+    <textarea id="regReason" rows="3" placeholder="Lý do muốn tham gia CLB"></textarea>
+  </div>
+  <button type="submit" class="btn-submit-custom">TẠO TÀI KHOẢN</button>
+</div>
+<p class="notice text-center" id="regNotice" style="padding: 0 25px;"></p>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CHÂN TRANG -->
+<footer id="contact">
+<div class="container">
+<h3>CÂU LẠC BỘ TRUYỀN THÔNG VÀ SÁNG TẠO</h3>
+<p>Sáng tạo không giới hạn – Kết nối đam mê – Khẳng định tài năng.</p>
+<p>Email: clbtruyenthongvasangtao@example.com</p>
+<p>© 2026 Câu lạc bộ Truyền thông và Sáng tạo. All Rights Reserved.</p>
+</div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script src="js/jquery-min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/jquery.nav.js"></script>
+<script src="js/scrolling-nav.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/nivo-lightbox.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+(function(){
+"use strict";
+
+const $ = id => document.getElementById(id);
+const read = (key, fallback) => {
+ try { return JSON.parse(localStorage.getItem(key)) ?? fallback; }
+ catch(e) { return fallback; }
+};
+const write = (key, value) =>
+ localStorage.setItem(key, JSON.stringify(value));
+const money = value =>
+ Number(value || 0).toLocaleString("vi-VN") + " ₫";
+
+let members = read("clbMembers", []);
+let events = read("clbEvents", []);
+let transactions = read("clbFinance", []);
+
+function updateStats(){
+ $("totalMembers").textContent = members.length;
+ $("totalEvents").textContent = events.length;
+ let balance = transactions.reduce((sum,t) =>
+ sum + (t.type==="thu" ? Number(t.amount) : -Number(t.amount)),0);
+ $("totalBalance").textContent = money(balance);
+}
+
+/* THÀNH VIÊN */
+function renderMembers(filter=""){
+ const body=$("memberRows");
+ body.innerHTML="";
+ members.filter(m=>
+ (m.name+" "+m.email+" "+(m.className||"")).toLowerCase().includes(filter.toLowerCase())
+ ).forEach(m=>{
+ const tr=document.createElement("tr");
+ [m.name,m.email,m.phone,m.className||"-",m.role||"Thành viên"].forEach(value=>{
+ const td=document.createElement("td");
+ td.textContent=value;
+ tr.appendChild(td);
+ });
+ const action=document.createElement("td");
+ const edit=document.createElement("button");
+ edit.className="btn btn-sm btn-info";
+ edit.textContent="Sửa";
+ edit.onclick=()=>{
+ $("memberId").value=m.id;
+ $("memberName").value=m.name;
+ $("memberEmail").value=m.email;
+ $("memberPhone").value=m.phone;
+ $("memberClass").value=m.className||"";
+ $("memberRole").value=m.role||"Thành viên";
+ $("saveMember").textContent="Cập nhật";
+ };
+ const del=document.createElement("button");
+ del.className="btn btn-sm btn-danger";
+ del.textContent="Xóa";
+ del.onclick=()=>{
+ if(confirm("Bạn có chắc muốn xóa thành viên này?")){
+ members=members.filter(x=>x.id!==m.id);
+ write("clbMembers",members);
+ renderMembers($("memberSearch").value);
+ updateStats();
+ }
+ };
+ action.append(edit,del);
+ tr.appendChild(action);
+ body.appendChild(tr);
+ });
+ updateStats();
+}
+
+$("saveMember").onclick=()=>{
+ const name=$("memberName").value.trim();
+ const email=$("memberEmail").value.trim();
+ const phone=$("memberPhone").value.trim();
+ const className=$("memberClass").value.trim();
+ const role=$("memberRole").value;
+ if(!name||!email||!phone){
+ $("memberNotice").textContent="Vui lòng nhập đầy đủ họ tên, email và số điện thoại.";
+ return;
+ }
+ const id=$("memberId").value;
+ if(id){
+ const member=members.find(m=>String(m.id)===id);
+ if(member) Object.assign(member,{name,email,phone,className,role});
+ $("memberNotice").textContent="Đã cập nhật thông tin thành viên.";
+ }else{
+ members.push({id:Date.now(),name,email,phone,className,role});
+ $("memberNotice").textContent="Đã thêm thành viên mới.";
+ }
+ write("clbMembers",members);
+ ["memberId","memberName","memberEmail","memberPhone","memberClass"].forEach(id=>$(id).value="");
+ $("saveMember").textContent="Thêm thành viên";
+ renderMembers($("memberSearch").value);
+};
+$("memberSearch").addEventListener("input",e=>renderMembers(e.target.value));
+
+/* SỰ KIỆN */
+function renderEvents(){
+ const body=$("eventRows");
+ body.innerHTML="";
+ events.forEach(event=>{
+ const tr=document.createElement("tr");
+ [event.name,event.date,event.place].forEach(value=>{
+ const td=document.createElement("td");
+ td.textContent=value;
+ tr.appendChild(td);
+ });
+ const register=document.createElement("td");
+ const count=document.createElement("span");
+ count.textContent=(event.attendees||[]).length+" người ";
+ const attend=document.createElement("button");
+ attend.className="btn btn-sm btn-info";
+ attend.textContent="Điểm danh";
+ attend.onclick=()=>{
+ const name=prompt("Nhập tên thành viên điểm danh:");
+ if(name){
+ event.attendees=event.attendees||[];
+ event.attendees.push(name);
+ write("clbEvents",events);
+ renderEvents();
+ }
+ };
+ register.append(count,attend);
+ tr.appendChild(register);
+ const action=document.createElement("td");
+ const del=document.createElement("button");
+ del.className="btn btn-sm btn-danger";
+ del.textContent="Xóa";
+ del.onclick=()=>{
+ if(confirm("Xóa sự kiện này?")){
+ events=events.filter(e=>e.id!==event.id);
+ write("clbEvents",events);
+ renderEvents();
+ }
+ };
+ action.appendChild(del);
+ tr.appendChild(action);
+ body.appendChild(tr);
+ });
+ updateStats();
+}
+$("addEvent").onclick=()=>{
+ const name=$("eventName").value.trim();
+ const date=$("eventDate").value;
+ const place=$("eventPlace").value.trim();
+ if(!name||!date||!place){
+ $("eventNotice").textContent="Vui lòng nhập đầy đủ tên, thời gian và địa điểm.";
+ return;
+ }
+ events.push({id:Date.now(),name,date,place,attendees:[]});
+ write("clbEvents",events);
+ $("eventName").value="";
+ $("eventDate").value="";
+ $("eventPlace").value="";
+ $("eventNotice").textContent="Đã thêm sự kiện thành công.";
+ renderEvents();
+};
+
+/* TÀI CHÍNH */
+function renderFinance(){
+ const body=$("financeRows");
+ body.innerHTML="";
+ let income=0,expense=0;
+ transactions.forEach(t=>{
+ if(t.type==="thu") income+=Number(t.amount);
+ else expense+=Number(t.amount);
+ const tr=document.createElement("tr");
+ [t.desc,t.type==="thu"?"Thu":"Chi",money(t.amount),t.date].forEach(value=>{
+ const td=document.createElement("td");
+ td.textContent=value;
+ tr.appendChild(td);
+ });
+ const action=document.createElement("td");
+ const del=document.createElement("button");
+ del.className="btn btn-sm btn-danger";
+ del.textContent="Xóa";
+ del.onclick=()=>{
+ if(confirm("Xóa giao dịch này?")){
+ transactions=transactions.filter(x=>x.id!==t.id);
+ write("clbFinance",transactions);
+ renderFinance();
+ }
+ };
+ action.appendChild(del);
+ tr.appendChild(action);
+ body.appendChild(tr);
+ });
+ $("financeIncome").textContent=money(income);
+ $("financeExpense").textContent=money(expense);
+ $("financeBalance").textContent=money(income-expense);
+ updateStats();
+}
+$("addFinance").onclick=()=>{
+ const desc=$("financeDesc").value.trim();
+ const amount=Number($("financeAmount").value);
+ const type=$("financeType").value;
+ if(!desc||!Number.isFinite(amount)||amount<=0){
+ alert("Vui lòng nhập nội dung và số tiền hợp lệ.");
+ return;
+ }
+ transactions.push({
+ id:Date.now(),desc,amount,type,
+ date:new Date().toLocaleDateString("vi-VN")
+ });
+ write("clbFinance",transactions);
+ $("financeDesc").value="";
+ $("financeAmount").value="";
+ renderFinance();
+};
+$("printFinance").onclick=()=>window.print();
+
+/* ĐĂNG KÝ THÀNH VIÊN MỚI (TÍCH HỢP BÀI 1) */
+$("registrationForm").addEventListener("submit",function(e){
+ e.preventDefault();
+ const name=$("regName").value.trim();
+ const email=$("regEmail").value.trim();
+ const phone=$("regPhone").value.trim();
+ const className=$("regAddress").value.trim();
+ const reason=$("regReason").value.trim();
+ 
+ if(!name||!/^\S+@\S+\.\S+$/.test(email)||!phone){
+ $("regNotice").style.color = "red";
+ $("regNotice").textContent="Vui lòng kiểm tra lại thông tin bắt buộc.";
+ return;
+ }
+
+ members.push({
+ id:Date.now(),name,email,phone,className: className||"Chưa rõ",role:"Thành viên"
+ });
+ write("clbMembers",members);
+
+ const registrations=read("clbRegistrations",[]);
+ registrations.push({
+ id:Date.now(),name,email,phone,reason,
+ date:new Date().toLocaleDateString("vi-VN")
+ });
+ write("clbRegistrations",registrations);
+
+ $("regNotice").style.color = "green";
+ $("regNotice").textContent="Đăng ký thành công! Đã tự động thêm vào danh sách thành viên CLB.";
+ renderMembers();
+ this.reset();
+});
+
+/* KHỞI TẠO */
+renderMembers();
+renderEvents();
+renderFinance();
+updateStats();
+
+})();
+</script>
+
+</body>
+</html>

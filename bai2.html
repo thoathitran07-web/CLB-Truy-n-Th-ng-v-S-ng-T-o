@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 2 - Giới thiệu bản thân</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #fff9eb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    /* Khung card tổng thể */
+    .intro-card {
+      background-color: #fffdf5;
+      border-radius: 30px;
+      padding: 50px 40px;
+      width: 750px;
+      height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+      overflow: hidden;
+    }
+
+    /* Khối nền xanh bo sóng lượn bên trái */
+    .content-box {
+      background-color: #cce7f6;
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+      padding: 40px 30px;
+      width: 52%;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    .content-box h1 {
+      margin: 0;
+      font-size: 32px;
+      color: #1e293b;
+      font-weight: 900;
+      line-height: 1.25;
+    }
+    .content-box p {
+      margin-top: 15px;
+      font-size: 12px;
+      color: #556270;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    /* Khối chứa ảnh và khung cam bên phải */
+    .avatar-wrapper {
+      width: 42%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+    }
+
+    /* Khung nền cam dạng sticker thủ công */
+    .orange-frame {
+      background-color: #fca33d;
+      border-radius: 25px 20px 30px 20px;
+      width: 210px;
+      height: 220px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      box-shadow: 0 8px 15px rgba(252, 163, 61, 0.2);
+    }
+
+    /* Bo góc ảnh bên trong khung cam */
+    .avatar-img {
+      width: 175px;
+      height: 175px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    /* Chấm tròn màu tím phía trên khung cam */
+    .purple-dot {
+      position: absolute;
+      top: -15px;
+      right: 85px;
+      width: 35px;
+      height: 35px;
+      background-color: #a7a9fc;
+      border-radius: 50%;
+      z-index: 3;
+    }
+
+    /* Cầu vồng trang trí ở góc dưới bên phải */
+    .rainbow-decor {
+      position: absolute;
+      bottom: -15px;
+      right: -10px;
+      width: 90px;
+      z-index: 3;
+    }
+
+    /* Ngôi sao lấp lánh ở góc trên bên trái */
+    .star-decor {
+      position: absolute;
+      top: 25px;
+      left: 30px;
+      width: 45px;
+      z-index: 3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="intro-card">
+    <!-- Ngôi sao trang trí góc trái -->
+    <svg class="star-decor" viewBox="0 0 100 100">
+      <path d="M50 0 L61 39 L100 50 L61 61 L50 100 L39 61 L0 50 L39 39 Z" fill="#d2f864"/>
+    </svg>
+
+    <!-- Khối chữ bên trái -->
+    <div class="content-box">
+      <h1>Tôi là<br>Trần Thị Thỏa</h1>
+      <p>Tôi là chủ nhiệm của Câu lạc bộ Truyền thông và Sáng tạo</p>
+    </div>
+
+    <!-- Khối ảnh và khung cam bên phải -->
+    <div class="avatar-wrapper">
+      <div class="purple-dot"></div>
+      <div class="orange-frame">
+        <!-- Thay link ảnh cá nhân của bạn vào đây -->
+        <img src="D:\Bài thực hành số 9\anhdaidien.jpg" alt="Avatar" class="avatar-img">
+      </div>
+      <!-- Hình cầu vồng trang trí góc dưới -->
+      <svg class="rainbow-decor" viewBox="0 0 100 60">
+        <path d="M10 50 A 40 40 0 0 1 90 50" stroke="#f687b3" stroke-width="8" fill="none" stroke-linecap="round"/>
+        <path d="M20 50 A 30 30 0 0 1 80 50" stroke="#63b3ed" stroke-width="8" fill="none" stroke-linecap="round"/>
+        <path d="M30 50 A 20 20 0 0 1 70 50" stroke="#f6e05e" stroke-width="8" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+
+</body>
+</html>
